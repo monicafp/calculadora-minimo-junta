@@ -1,0 +1,22 @@
+{
+  "name": "calculadora-minimo-junta",
+  "version": "0.1.0",
+  "description": "A calculator for your budget with a 4.25/hr income.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monicafp/calculadora-minimo-junta.git"
+  },
+  "author": "Mónica Fornaris-Pau",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/monicafp/calculadora-minimo-junta/issues"
+  },
+  "homepage": "https://github.com/monicafp/calculadora-minimo-junta#readme"
+}
