@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
+    <script src="assets/js/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
+	  <script src="assets/javascript/odometer.js"></script>
   </head>
   <body>
 
@@ -36,7 +39,7 @@
                 El 4 de enero de 2016 el Gobierno de Estados Unidos aprobó la Ley PROMESA. La sección 403 de dicha ley le otorga al Gobernador de Puerto Rico el poder de reducir el salario mínimo a $4.25 por hora. De ser ejecutada, esta disposición se mantendría en lugar por un máximo de 4 años y aplicaría solo a aquellos empleados que hayan sido contratados inicialmente luego del 30 de junio de 2016 y que sean menores de 20 años.
               </p>
               <p>
-                ¿Puedes tú vivir con $4.25 la hora?
+                ¿Puedes vivir con $4.25 la hora?
               </p>
             </div>
           </div>
@@ -48,7 +51,163 @@
 
     <!-- Start of budget calculator section-->
     <main>
+      <div class="container">
+        <div class="row">
+          <div id="spending-categories" class="col-xs-12 col-md-6 col-md-offset-1">
+            <div class="row info-inputs">
+              <div class="col-xs-12 col-md-6 info">
+                <p class="category-title">Vivienda</p>
+                <p class="category-info">
+                  Escribe la cantidad de tu pago de renta o hipoteca mensual. Incluye el costo del seguro si lo pagas por separado.
+                </p>
+              </div>
+              <div id="inputs" class="col-xs-12 col-md-6">
+                <span>$</span>
+                <input id="vivienda" tabindex="1" type="text" value="">
+                <select>
+                  <option value="Diario">Diario</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Mensual" selected="selected">Mensual</option>
+                  <option value="Anual">Anual</option>
+                </select>
+              </div>
+            </div>
 
+            <div class="row">
+              <div id="info" class="col-xs-12 col-md-6">
+                Utilidades y servicios
+              </div>
+              <div id="inputs" class="col-xs-12 col-md-6">
+                <span>$</span>
+                <input id="utilidades-servicios" tabindex="1" type="text" value="">
+                <select>
+                  <option value="Diario">Diario</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Mensual" selected="selected">Mensual</option>
+                  <option value="Anual">Anual</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="info" class="col-xs-12 col-md-6">
+                Transporte
+              </div>
+              <div id="inputs" class="col-xs-12 col-md-6">
+                <span>$</span>
+                <input id="transporte" tabindex="1" type="text" value="">
+                <select>
+                  <option value="Diario">Diario</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Mensual" selected="selected">Mensual</option>
+                  <option value="Anual">Anual</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="info" class="col-xs-12 col-md-6">
+                Gastos médicos
+              </div>
+              <div id="inputs" class="col-xs-12 col-md-6">
+                <span>$</span>
+                <input id="gastos-medicos" tabindex="1" type="text" value="">
+                <select>
+                  <option value="Diario">Diario</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Mensual" selected="selected">Mensual</option>
+                  <option value="Anual">Anual</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="info" class="col-xs-12 col-md-6">
+                Deudas y préstamos
+              </div>
+              <div id="inputs" class="col-xs-12 col-md-6">
+                <span>$</span>
+                <input id="deudas-prestamos" tabindex="1" type="text" value="">
+                <select>
+                  <option value="Diario">Diario</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Mensual" selected="selected">Mensual</option>
+                  <option value="Anual">Anual</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="info" class="col-xs-12 col-md-6">
+                Comida
+              </div>
+              <div id="inputs" class="col-xs-12 col-md-6">
+                <span>$</span>
+                <input id="comida" tabindex="1" type="text" value="">
+                <select>
+                  <option value="Diario">Diario</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Mensual" selected="selected">Mensual</option>
+                  <option value="Anual">Anual</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="info" class="col-xs-12 col-md-6">
+                Household Essentials
+              </div>
+              <div id="inputs" class="col-xs-12 col-md-6">
+                <span>$</span>
+                <input id="household-essentials" tabindex="1" type="text" value="">
+                <select>
+                  <option value="Diario">Diario</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Mensual" selected="selected">Mensual</option>
+                  <option value="Anual">Anual</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="info" class="col-xs-12 col-md-6">
+                Impuestos
+              </div>
+              <div id="inputs" class="col-xs-12 col-md-6">
+                <span>$</span>
+                <input id="impuestos" tabindex="1" type="text" value="">
+                <select>
+                  <option value="Diario">Diario</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Mensual" selected="selected">Mensual</option>
+                  <option value="Anual">Anual</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="info" class="col-xs-12 col-md-6">
+                Otros gastos
+              </div>
+              <div id="inputs" class="col-xs-12 col-md-6">
+                <span>$</span>
+                <input id="otros-gastos" tabindex="1" type="text" value="">
+                <select>
+                  <option value="Diario">Diario</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Mensual" selected="selected">Mensual</option>
+                  <option value="Anual">Anual</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+          <!-- Este div debe esconderse para xs screen size -->
+          <div id="total-budget" class="col-xs-12 col-md-4 odometer">
+            8,840
+          </div>
+        </div>
+      </div>
     </main>
     <!-- End of budget calculator section -->
 
