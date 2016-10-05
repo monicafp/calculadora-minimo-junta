@@ -33,5 +33,16 @@ $(document).ready(function() {
       odometer.innerHTML = result;
     }, 100);
 
+    if(result < 0) {
+      $('#note-total').html("de deuda anual");
+    }
+    if(result === 8840) {
+      $('#note-total').html("de salario anual");
+    }
+    if(result > 0 && result !== 8840) {
+      $('#note-total').html("restantes para el año");
+    }
+
   };
+
 });
