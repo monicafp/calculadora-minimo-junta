@@ -1,17 +1,17 @@
 #main-header {
   background-image: url('../images/osj.jpg');
-  width: 100%;
-  height: calc(100vh - 170px);
   background-position: center center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 170px);
+  width: 100%;
 }
 
 #main-header p {
-  text-align: center;
-  font-size: 65px;
   color: black;
+  font-size: 65px;
   margin-top: 60px;
+  text-align: center;
 }
 
 #secondary-header p {
@@ -20,7 +20,27 @@
   text-align: center;
 }
 
+#total-budget {
+  font-size: xx-large;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.category-info {
+  font-size: medium;
+}
+
+.category-title {
+  font-size: x-large;
+}
+
 .info-inputs {
   border-bottom: grey 1px solid;
   padding: 15px 0;
+}
+
+.inputs {
+  text-align: center;
 }

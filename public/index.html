@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>¿Puedes vivir con 4.25/hr?</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
-    <script src="assets/js/jquery-3.1.1.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
-	  <script src="assets/javascript/odometer.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+	  <script src="assets/js/odometer.js"></script>
+    <script src="assets/js/index.js"></script>
   </head>
   <body>
 
@@ -53,7 +53,9 @@
     <main>
       <div class="container">
         <div class="row">
-          <div id="spending-categories" class="col-xs-12 col-md-6 col-md-offset-1">
+
+          <div id="gastos" class="col-xs-12 col-md-6 col-md-offset-1">
+
             <div class="row info-inputs">
               <div class="col-xs-12 col-md-6 info">
                 <p class="category-title">Vivienda</p>
@@ -61,151 +63,126 @@
                   Escribe la cantidad de tu pago de renta o hipoteca mensual. Incluye el costo del seguro si lo pagas por separado.
                 </p>
               </div>
-              <div id="inputs" class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6 inputs">
                 <span>$</span>
                 <input id="vivienda" tabindex="1" type="text" value="">
-                <select>
-                  <option value="Diario">Diario</option>
-                  <option value="Semanal">Semanal</option>
-                  <option value="Mensual" selected="selected">Mensual</option>
-                  <option value="Anual">Anual</option>
-                </select>
               </div>
             </div>
 
-            <div class="row">
-              <div id="info" class="col-xs-12 col-md-6">
-                Utilidades y servicios
+            <div class="row info-inputs">
+              <div class="col-xs-12 col-md-6">
+                <p class="category-title">Utilidades y servicios</p>
+                <p class="category-info">
+                  Escribe la cantidad mensual aproximada de tus gastos de utilidades y otros servicios, e.g. luz, agua, cable, internet, etc.
+                </p>
               </div>
-              <div id="inputs" class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6 inputs">
                 <span>$</span>
                 <input id="utilidades-servicios" tabindex="1" type="text" value="">
-                <select>
-                  <option value="Diario">Diario</option>
-                  <option value="Semanal">Semanal</option>
-                  <option value="Mensual" selected="selected">Mensual</option>
-                  <option value="Anual">Anual</option>
-                </select>
               </div>
             </div>
 
-            <div class="row">
-              <div id="info" class="col-xs-12 col-md-6">
-                Transporte
+            <div class="row info-inputs">
+              <div class="col-xs-12 col-md-6">
+                <p class="category-title">Transporte</p>
+                <p class="category-info">
+                  Escribe la cantidad mensual aproximada de tu pago de carro, gasolina, transporte público, etc.
+                </p>
               </div>
-              <div id="inputs" class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6 inputs">
                 <span>$</span>
                 <input id="transporte" tabindex="1" type="text" value="">
-                <select>
-                  <option value="Diario">Diario</option>
-                  <option value="Semanal">Semanal</option>
-                  <option value="Mensual" selected="selected">Mensual</option>
-                  <option value="Anual">Anual</option>
-                </select>
               </div>
             </div>
 
-            <div class="row">
-              <div id="info" class="col-xs-12 col-md-6">
-                Gastos médicos
+            <div class="row info-inputs">
+              <div class="col-xs-12 col-md-6">
+                <p class="category-title">Gastos médicos</p>
+                <p class="category-info">
+                  Escribe la cantidad mensual aproximada de tus gastos médicos, e.g. medicinas, citas médicas, tratamientos, etc.
+                </p>
               </div>
-              <div id="inputs" class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6 inputs">
                 <span>$</span>
                 <input id="gastos-medicos" tabindex="1" type="text" value="">
-                <select>
-                  <option value="Diario">Diario</option>
-                  <option value="Semanal">Semanal</option>
-                  <option value="Mensual" selected="selected">Mensual</option>
-                  <option value="Anual">Anual</option>
-                </select>
               </div>
             </div>
 
-            <div class="row">
-              <div id="info" class="col-xs-12 col-md-6">
-                Deudas y préstamos
+            <div class="row info-inputs">
+              <div class="col-xs-12 col-md-6">
+                <p class="category-title">Deudas y préstamos</p>
+                <p class="category-info">
+                  Escribe la cantidad mensual aproximada de tus gastos de de deudas y préstamos, e.g. préstamos estudiantiles, , etc.
+                </p>
               </div>
-              <div id="inputs" class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6 inputs">
                 <span>$</span>
                 <input id="deudas-prestamos" tabindex="1" type="text" value="">
-                <select>
-                  <option value="Diario">Diario</option>
-                  <option value="Semanal">Semanal</option>
-                  <option value="Mensual" selected="selected">Mensual</option>
-                  <option value="Anual">Anual</option>
-                </select>
               </div>
             </div>
 
-            <div class="row">
-              <div id="info" class="col-xs-12 col-md-6">
-                Comida
+            <div class="row info-inputs">
+              <div class="col-xs-12 col-md-6">
+                <p class="category-title">Comida</p>
+                <p class="category-info">
+                  Escribe la cantidad mensual aproximada de tus gastos de compra.
+                </p>
               </div>
-              <div id="inputs" class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6 inputs">
                 <span>$</span>
                 <input id="comida" tabindex="1" type="text" value="">
-                <select>
-                  <option value="Diario">Diario</option>
-                  <option value="Semanal">Semanal</option>
-                  <option value="Mensual" selected="selected">Mensual</option>
-                  <option value="Anual">Anual</option>
-                </select>
               </div>
             </div>
 
-            <div class="row">
-              <div id="info" class="col-xs-12 col-md-6">
-                Household Essentials
+            <div class="row info-inputs">
+              <div class="col-xs-12 col-md-6">
+                <p class="category-title">Gastos de la casa</p>
+                <p class="category-info">
+                  Escribe la cantidad mensual aproximada de tus gastos de la casa.
+                </p>
               </div>
-              <div id="inputs" class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6 inputs">
                 <span>$</span>
                 <input id="household-essentials" tabindex="1" type="text" value="">
-                <select>
-                  <option value="Diario">Diario</option>
-                  <option value="Semanal">Semanal</option>
-                  <option value="Mensual" selected="selected">Mensual</option>
-                  <option value="Anual">Anual</option>
-                </select>
               </div>
             </div>
 
-            <div class="row">
-              <div id="info" class="col-xs-12 col-md-6">
-                Impuestos
+            <div class="row info-inputs">
+              <div class="col-xs-12 col-md-6">
+                <p class="category-title">Impuestos</p>
+                <p class="category-info">
+                  Escribe la cantidad mensual aproximada de tus gastos de impuestos
+                </p>
               </div>
-              <div id="inputs" class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6 inputs">
                 <span>$</span>
                 <input id="impuestos" tabindex="1" type="text" value="">
-                <select>
-                  <option value="Diario">Diario</option>
-                  <option value="Semanal">Semanal</option>
-                  <option value="Mensual" selected="selected">Mensual</option>
-                  <option value="Anual">Anual</option>
-                </select>
               </div>
             </div>
 
-            <div class="row">
-              <div id="info" class="col-xs-12 col-md-6">
-                Otros gastos
+            <div class="row info-inputs">
+              <div class="col-xs-12 col-md-6">
+                <p class="category-title">Otros gastos</p>
+                <p class="category-info">
+                  Escribe la cantidad mensual aproximada de otros gastos.
+                </p>
               </div>
-              <div id="inputs" class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6 inputs">
                 <span>$</span>
                 <input id="otros-gastos" tabindex="1" type="text" value="">
-                <select>
-                  <option value="Diario">Diario</option>
-                  <option value="Semanal">Semanal</option>
-                  <option value="Mensual" selected="selected">Mensual</option>
-                  <option value="Anual">Anual</option>
-                </select>
               </div>
             </div>
 
           </div>
+
           <!-- Este div debe esconderse para xs screen size -->
-          <div id="total-budget" class="col-xs-12 col-md-4 odometer">
-            8,840
+          <div id="total-budget" class="col-xs-12 col-md-4">
+            $
+            <span id="odometer" class="odometer">
+              8,840
+            </span>
           </div>
+
         </div>
       </div>
     </main>
