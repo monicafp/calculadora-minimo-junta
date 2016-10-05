@@ -18,15 +18,15 @@ $(document).ready(function() {
     var $otrosGastos = $('#otros-gastos');
 
     result = 8840 - (
-      (Number($vivienda.val()) || 0) +
-      (Number($utilidadesServicios.val()) || 0) +
-      (Number($transporte.val()) || 0) +
-      (Number($gastosMedicos.val()) || 0) +
-      (Number($deudasPrestamos.val()) || 0) +
-      (Number($comida.val()) || 0) +
-      (Number($householdEssentials.val()) || 0) +
-      (Number($impuestos.val()) || 0) +
-      (Number($otrosGastos.val()) || 0)
+      (Number(($vivienda.val()) || 0)*12) +
+      (Number(($utilidadesServicios.val())|| 0)*12) +
+      (Number(($transporte.val()) || 0)*12) +
+      (Number(($gastosMedicos.val()) || 0)*12) +
+      (Number(($deudasPrestamos.val()) || 0)*12) +
+      (Number(($comida.val()) || 0)*12) +
+      (Number(($householdEssentials.val()) || 0)*12) +
+      (Number(($impuestos.val()) || 0)*12) +
+      (Number(($otrosGastos.val()) || 0)*12)
     );
 
     setTimeout(function(){
