@@ -34,7 +34,8 @@ $(document).ready(function() {
     }, 100);
 
     if(result < 0) {
-      $('#note-total').html("de deuda anual");
+      var additionalHours = -(result / 4.25 / 52);
+      $('#note-total').html("de déficit anual o el equivalente de " + additionalHours.toFixed(1) + " horas adicionales de trabajo a la semana");
     }
     if(result === 8840) {
       $('#note-total').html("de salario anual");
