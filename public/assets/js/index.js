@@ -33,6 +33,5 @@ $(document).ready(function() {
       odometer.innerHTML = result;
     }, 100);
 
-    // ('#total-budget').html('$' + result);
   };
 });
