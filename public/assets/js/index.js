@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+  $(document).on("scroll", function() {
+    var pos = $(document).scrollTop();
+    if (pos > 377) {
+      console.log("fixed");
+      $("#total-budget").css("position", "fixed");
+      $("#total-budget").css("bottom", "130px");
+    } else {
+      console.log("relative");
+      $("#total-budget").css("position", "relative");
+      $("#total-budget").css("bottom", "auto");
+      $("#total-budget").css("float", "right");
+    }
+  })
+
   $('input').change(function() {
     updateResult();
   });
