@@ -31,6 +31,10 @@
   right: 0;
 }
 
+.category-images {
+  padding-left: 0px;
+}
+
 .category-info {
   font-size: medium;
 }
@@ -38,16 +42,25 @@
 .category-title {
   font-size: x-large;
   font-weight: bold;
+  padding-left: 0px;
 }
 
 .info-inputs {
   border-bottom: grey 1px solid;
-  padding: 15px 0;
+  padding: 25px 0;
 }
 
 .inputs {
   text-align: center;
 
+}
+
+footer {
+  margin-top: 70px;
+}
+
+footer .col-xs-11 {
+  padding-left: 0px;
 }
 
 input {
@@ -58,5 +71,4 @@ input {
     font-size: xx-large;
     color: grey;
     padding-left: 10px;
-    margin-top: 20px;
 }
