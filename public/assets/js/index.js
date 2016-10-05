@@ -45,4 +45,23 @@ $(document).ready(function() {
 
   };
 
+  $('#reset-button').click(function() {
+    $('#vivienda').val(0);
+    $('#utilidades-servicios').val(0);
+    $('#transporte').val(0);
+    $('#gastos-medicos').val(0);
+    $('#deudas-prestamos').val(0);
+    $('#comida').val(0);
+    $('#household-essentials').val(0);
+    $('#impuestos').val(0);
+    $('#otros-gastos').val(0);
+
+    setTimeout(function(){
+      odometer.innerHTML = 8840;
+    }, 100);
+
+    $('#note-total').html("de salario anual");
+
+  });
+
 });
