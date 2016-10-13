@@ -18,7 +18,14 @@ $(document).ready(function() {
     updateResult();
   });
 
+  $('#wage').change(function() {
+    updateResult();
+  })
+
   function updateResult() {
+
+    var $salario = Number($('#wage').val());
+    var $horasSem = 40;
 
     var $totalBudget = $('#total-budget');
     var $vivienda = $('#vivienda');
@@ -31,7 +38,7 @@ $(document).ready(function() {
     var $impuestos = $('#impuestos');
     var $otrosGastos = $('#otros-gastos');
 
-    result = 8840 - (
+    result = ($salario * $horasSem * 52) - (
       (Number(($vivienda.val()) || 0)*12) +
       (Number(($utilidadesServicios.val())|| 0)*12) +
       (Number(($transporte.val()) || 0)*12) +
@@ -48,19 +55,20 @@ $(document).ready(function() {
     }, 100);
 
     if(result < 0) {
-      var additionalHours = -(result / 4.25 / 52);
+      var additionalHours = -(result / $salario / 52);
       $('#note-total').html("de déficit anual o el equivalente de " + additionalHours.toFixed(1) + " horas adicionales de trabajo a la semana");
     }
-    if(result === 8840) {
+    if(result === ($salario * $horasSem * 52)) {
       $('#note-total').html("de salario anual");
     }
-    if(result > 0 && result !== 8840) {
+    if(result > 0 && result !== ($salario * $horasSem * 52)) {
       $('#note-total').html("restantes para el año");
     }
 
   };
 
   $('#reset-button').click(function() {
+
     $('#vivienda').val(0);
     $('#utilidades-servicios').val(0);
     $('#transporte').val(0);
@@ -72,10 +80,12 @@ $(document).ready(function() {
     $('#otros-gastos').val(0);
 
     setTimeout(function(){
-      odometer.innerHTML = 8840;
+      odometer.innerHTML = (Number($salario) * $horasSem * 52);
     }, 100);
 
     $('#note-total').html("de salario anual");
+
+    updateResult();
 
   });
 
